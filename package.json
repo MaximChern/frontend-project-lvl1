@@ -1,0 +1,26 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximChern/frontend-project-lvl1.git"
+  },
+  "author": "MaximChern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaximChern/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/MaximChern/frontend-project-lvl1#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
