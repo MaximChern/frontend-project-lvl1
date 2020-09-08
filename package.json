@@ -1,0 +1,36 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximChern/frontend-project-lvl1.git"
+  },
+  "author": "MaximChern",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaximChern/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/MaximChern/frontend-project-lvl1#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@jest/globals": "^26.4.2",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "jest": "^26.4.2",
+    "jest-cli": "^26.4.2"
+  }
+}
