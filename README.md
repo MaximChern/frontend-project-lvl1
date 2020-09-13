@@ -14,4 +14,8 @@
  
  # calc asciinema
  https://asciinema.org/a/fdZN2ZHuaakap32hlKkvNcHJa
+
+ # nod asciinema
+
+ https://asciinema.org/a/yHisqME2E2WHEzfvp36H3mH5A
  
