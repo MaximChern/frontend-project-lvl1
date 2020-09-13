@@ -105,3 +105,43 @@ export const Calc = () => {
     }
   }
 };
+
+// игра "Наибольший общий делитель (НОД)"
+
+export const Nodnum = () => {
+  const Name = Intro();
+  console.log('Find the greatest common divisor of given numbers.');
+  let count = '';
+  while (true) {
+    if (count.substr(0, 3) === 'aaa') {
+      console.log(
+        ' You are a winner!!! Congratulations!!!\n           THE END!!!'
+      );
+      break;
+    }
+    const Num1 = randomNum(1, 100);
+    const Num2 = randomNum(1, 100);
+
+    console.log(`Question:${Num1} and ${Num2}`);
+
+    // Nodfunc функция вычисления НОД
+
+    const Nodfunc = (x, y) => {
+      if (y > x) return Nodfunc(y, x);
+      if (!y) return x;
+      return Nodfunc(y, x % y);
+    };
+
+    const result = Nodfunc(Num1, Num2);
+    const Answer = readlineSync.question('Your answer?');
+    if (Number(Answer) === result) {
+      console.log('Correct!!!');
+      count = `a${count}`;
+    } else {
+      count = `b${count}`;
+      console.log(`${Answer} is wrong answer ;(. Correct answer was ${result}
+      Let's try again, ${Name}!`);
+      break;
+    }
+  }
+};
