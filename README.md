@@ -12,3 +12,6 @@
 
  https://asciinema.org/a/ER75TMNiIlSdXesB5FnFTQ4S9
  
+ # calc asciinema
+ https://asciinema.org/a/fdZN2ZHuaakap32hlKkvNcHJa
+ 
