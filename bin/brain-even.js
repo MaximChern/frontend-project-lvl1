@@ -1,5 +1,5 @@
-#!/usr/bin/env node make brain-games
+#!/usr/bin/env node make even
 
-import Even from '../src/even.js';
+import { Even } from '../src/index.js';
 
 Even();
