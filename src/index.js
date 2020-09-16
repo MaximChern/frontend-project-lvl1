@@ -145,3 +145,49 @@ export const Nodnum = () => {
     }
   }
 };
+
+// игра "Потерянный элемент"
+
+export const findElement = () => {
+  const Name = Intro();
+  console.log('Find What number is missing in the progression?.');
+  let count = '';
+  while (true) {
+    if (count.substr(0, 3) === 'aaa') {
+      console.log(
+        ' You are a winner!!! Congratulations!!!\n           THE END!!!'
+      );
+      break;
+    }
+    const Num1 = randomNum(1, 10);
+    const Num2 = randomNum(1, 5);
+    // формируем прогрессию. Первый элемент Num1 выбирается случайным образом,
+    // остальные 9 путом прибалвения случайного числа Num2 к предыдущему элементу*/
+    let X = Num1 + Num2;
+    let Progression = String(Num1);
+    for (let i = 0; i < 9; i += 1) {
+      Progression = `${Progression} ${X}`;
+      X += Num2;
+    }
+    // формируем массив-близнец прогрессии, что бы выбрать рандомно пропавший элемент
+    let Y = Num1 + Num2;
+    const arr = [Num1];
+    for (let i = 0; i < 9; i += 1) {
+      arr.push(Y);
+      Y += Num2;
+    }
+    const faiElem = Operator(arr); // это пропавший элемент
+    const Question = Progression.replace(String(faiElem), '..'); // заменяем пропаший элемент на точки
+    console.log(`Question: ${Question}`);
+    const Answer = readlineSync.question('Your answer?');
+    if (Number(Answer) === faiElem) {
+      console.log('Correct!!!');
+      count = `a${count}`;
+    } else {
+      count = `b${count}`;
+      console.log(`${Answer} is wrong answer ;(. Correct answer was ${faiElem}
+      Let's try again, ${Name}!`);
+      break;
+    }
+  }
+};
