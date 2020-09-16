@@ -19,3 +19,6 @@
 
  https://asciinema.org/a/yHisqME2E2WHEzfvp36H3mH5A
  
+ # progression asciinema
+ https://asciinema.org/connect/9d27368a-0d17-4e43-958d-b0b9cea85d8f
+ 
