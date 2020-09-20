@@ -32,7 +32,9 @@ export const Even = () => {
   let count = '';
   while (true) {
     if (count.substr(0, 3) === 'aaa') {
-      console.log(' You are a winner!!! Congratulations!!!\n           THE END!!!');
+      console.log(
+        ' You are a winner!!! Congratulations!!!\n           THE END!!!'
+      );
       break;
     }
     const Quest = randomNum(1, 999);
@@ -190,4 +192,58 @@ export const findElement = () => {
       break;
     }
   }
+};
+
+// Игра "Простое число"
+
+export const Prime = () => {
+  const Name = Intro();
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+  // сщздаем функцию, проверяющую число на простоту. Выдает ответ 'yes' или 'no' в виде строки.
+  const isPrime = (num) => {
+    let result;
+    if (num < 2) {
+      result = 'no';
+    } else {
+      if (num === 2) {
+        result = 'yes';
+      };
+    };
+
+    for (let i = 2; i < num; i += 1) {
+      if (num % i === 0) {
+        result = 'no';
+        break; // выйдем из цикла
+      }
+      result = 'yes';
+    }
+    return result;
+  }; // закрытие функции isPrime
+  // ниже пошел цикл игры
+  let count = '';
+  while (true) { // проверка трех правильных ответов
+    if (count.substr(0, 3) === 'aaa') {
+      console.log(' You are a winner!!! Congratulations!!!\n           THE END!!!');
+      break;
+    }
+    const num = randomNum(1, 100);
+
+    console.log(`Question: ${num}?`);
+    const Answer = readlineSync.question('Your answer?');
+    if (Answer === isPrime(num)) {
+      console.log('Correct!!!');
+      count = `a${count}`;
+    } else {
+      if (isPrime(num) === 'no' && Answer !== 'no') {
+        console.log(`${Answer} is wrong answer ;(. Correct answer was "no".
+        Let's try again, ${Name}!`);
+        break;
+      }
+      if (isPrime(num) === 'yes' && Answer !== 'yes') {
+        console.log(`${Answer} is wrong answer ;(. Correct answer was "yes".
+          Let's try again, ${Name}!`);
+        break;
+      }
+    };
+  };
 };
